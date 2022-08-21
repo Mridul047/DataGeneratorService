@@ -1,6 +1,6 @@
 package com.apps.mcy.DataGeneratorService.service;
 
-import com.apps.mcy.DataGeneratorService.component.CustomFaker;
+import net.datafaker.Faker;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,9 +8,9 @@ import java.util.List;
 @Service
 public class DataGenerator {
 
-  private CustomFaker customFaker;
+  private final Faker customFaker;
 
-  public DataGenerator(CustomFaker customFaker) {
+  public DataGenerator(Faker customFaker) {
     this.customFaker = customFaker;
   }
 
